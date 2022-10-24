@@ -10,4 +10,19 @@ When implementing a new feature or fixing a bug, please create a new pull reques
 
 ## First setup
 
-**[TODO 05/01/2018 @vanessa-cooper]:** _It's been a while since anyone ran a fresh copy of this repo. I think it's worth documenting the steps needed to install and run the repo on a new machine?_
+The following setup steps have been tested and should allow the solution to run on your local environment.
+
+  1. From the repository root, run `docker-compose up`
+
+     *Note: if you have not already pulled the required Docker images locally,
+     this step may take some time for the images to download.*
+
+     This will create a complete environment with front end, back end, and database services.
+
+  2. Test the back end by loading the following URL in a browser `http://localhost:3000/api/ping`
+
+  3. **If you see a `PendingMigrationError`**, run the migration to ensure that the database schema is up to date.
+
+  4. The site should now be fully working, you can register a new user from the front end at `http://localhost:3001/register`
+
+  5. To stop services, use Ctrl-C to exit out of the Docker compose session.
